@@ -1,0 +1,12 @@
+SECRET_KEY=j9z@f32*u8u9w2hkqnbf_p6-&od58j905bkgrnsmff$@jin_eu
+DEBUG=True
+
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+
+REDIS_HOST=redis
+REDIS_PORT=6379
