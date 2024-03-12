@@ -6,6 +6,7 @@ from django.db.models import Prefetch
 
 from .serializers import OrganizationSerializer, EventSerializer, EventCreateSerializer, EventDetailSerializer
 from .models import Organization, Event
+from .tasks import event_sleep_60
 
 
 class OrganizationViewSet(generics.CreateAPIView):
@@ -31,6 +32,7 @@ class EventViewSet(mixins.CreateModelMixin, mixins.RetrieveModelMixin, mixins.Li
 
     def get_serializer_class(self):
         if self.action == 'create':
+            event_sleep_60.delay()
             return EventCreateSerializer
         elif self.action == 'retrieve':
             return EventDetailSerializer

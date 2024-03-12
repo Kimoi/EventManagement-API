@@ -8,6 +8,7 @@
 ![Static Badge](https://img.shields.io/badge/Python-1?style=flat&logo=Python&labelColor=ffd847&color=3776ab&link=https%3A%2F%2Fwww.python.org%2F)
 ![Static Badge](https://img.shields.io/badge/PostgreSQL-1?style=flat&logo=PostgreSQL&labelColor=ffffff&color=336791&link=https%3A%2F%2Fwww.postgresql.org%2F)
 ![Static Badge](https://img.shields.io/badge/Docker-1?style=flat&logo=Docker&labelColor=ffffff&color=1d63ed&link=https%3A%2F%2Fwww.docker.com%2F)
+![Static Badge](https://img.shields.io/badge/Celery-1?style=flat&logo=Celery&labelColor=a9cc54&color=ddf4a4&link=https%3A%2F%2Fdocs.celeryq.dev%2F)
 ![Static Badge](https://img.shields.io/badge/Redis-1?style=flat&logo=Redis&labelColor=ffffff&color=161f31&link=https%3A%2F%2Fredis.io%2F)
 
 ## ✨Give it a try
@@ -33,7 +34,7 @@ nano .env
 docker-compose up -d --build
 ```
 
-- 3 containers should be running: web, db, redis
+- 4 containers should be running: web, db, redis, celery
 
 ```commandline
 docker ps

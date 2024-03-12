@@ -171,6 +171,14 @@ ASGI_APPLICATION = 'EventManagement.asgi.application'
 REDIS_HOST = os.getenv('REDIS_HOST', default='redis')
 REDIS_PORT = os.getenv('REDIS_PORT', default='6379')
 
+# Celery Configuration
+CELERY_TIMEZONE = 'Europe/Moscow'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
+CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}/0'
+CELERY_RESULT_BACKEND = f'redis://{REDIS_HOST}:{REDIS_PORT}/0'
+
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
